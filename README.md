@@ -32,3 +32,16 @@ Requirements
 ```
 pip install -r requirements.txt
 ```
+
+TO-DO
+-----
+Add moviepy, validators to requirements
+ETA of making GIF
+Turn into .GIF format alongside of HTML
+Check if downloaded GIF is in GIF format, if not convert
+
+ADDED
+-----
+URL TO GIF,
+HTML/CSS FORMATTING,
+MP4 TO GIF AUTO-CONVERT

@@ -8,13 +8,18 @@
         line-height: 1.0;
         font-size: 7px;
         font-family: 'Menlo', 'Courier New', 'Consola';
+		text-align: center;
+		margin-top: 1%;
       }
+	  
     </style>
 </head>
 <body>
+  <div id="_body">
   {% for string in strings %}
   <pre id="{{ loop.index }}" {% if loop.index > 0 %}style="display: none"{% endif %}>{{ string }}</pre>
   {% endfor %}
+  </div>
 </body>
 </html>
 <script>
