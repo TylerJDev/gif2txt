@@ -1,7 +1,9 @@
 gif2txt
 =======
 
-Gif image to to Ascii Text. (Just a toy)
+Gif image to to Ascii Text.
+Convert any GIF, MP4 into ASCII text animation!
+
 
 See also [img2txt](https://github.com/hit9/img2txt).
 
@@ -21,6 +23,7 @@ USAGE
 ```
 python gif2txt.py test.gif -m 80 -o out.html
 python gif2txt.py test.gif -m 80 -o withcolor.html -c
+python gif2txt.py https://i.giphy.com/media/AyawctCEVdEKk/giphy.mp4 -m 80 -o outlink.html
 ```
 
 Requirements
@@ -28,6 +31,9 @@ Requirements
 
 * Jinja2
 * Pillow
+* validators
+* moviepy
+* imageio
 
 ```
 pip install -r requirements.txt
@@ -35,13 +41,16 @@ pip install -r requirements.txt
 
 TO-DO
 -----
-Add moviepy, validators to requirements
 ETA of making GIF
-Turn into .GIF format alongside of HTML
-Check if downloaded GIF is in GIF format, if not convert
+See about making gif 'faster'
+Improve sizing of end .GIF
+Add support for color > .GIF
+Clean files from test after test has completed
 
 ADDED
 -----
 URL TO GIF,
 HTML/CSS FORMATTING,
 MP4 TO GIF AUTO-CONVERT
+Turn into .GIF format alongside of HTML
+Added test

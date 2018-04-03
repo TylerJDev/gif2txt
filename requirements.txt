@@ -1,2 +1,5 @@
 Pillow==4.1.0
 Jinja2==2.8
+validators==0.12.1
+moviepy==0.2.3.2
+imageio==2.3.0

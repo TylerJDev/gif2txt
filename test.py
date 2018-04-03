@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+import unittest
 import argparse
 import validators
 import random
@@ -33,7 +32,7 @@ def toMP4(f, fExt):
 	f = fExt[0] + '.gif';
 
 def gif2txt(filename, maxLen=80, output_file='out.html', with_color=False):
-
+	# # with_color = False # placeholder, remove
 	try:
 		maxLen = int(maxLen)
 	except:
@@ -134,7 +133,6 @@ def gif2txt(filename, maxLen=80, output_file='out.html', with_color=False):
 			img.seek(img.tell() + 1)
 	except EOFError:
 		pass
-
 	if with_color == False:
 		toGIF(c)
 	with open('template.jinja') as tpl_f:
@@ -144,30 +142,14 @@ def gif2txt(filename, maxLen=80, output_file='out.html', with_color=False):
 		if not isinstance(html, str):
 			html = html.encode('utf-8')
 		out_f.write(html)
+		
+	return True
 
-def main():
-	parser = argparse.ArgumentParser()
-
-	parser.add_argument('filename',
-						help='Gif input file')
-	parser.add_argument('-m', '--maxLen', type=int,
-						help='Max width of the output gif')
-	parser.add_argument('-o', '--output',
-						help='Name of the output file')
-	parser.add_argument('-c', '--color', action='store_true',
-						default=False,
-						help='With color')
-	args = parser.parse_args()
-
-	if not args.maxLen:
-		args.maxLen = 80
-	if not args.output:
-		args.output = 'out.html'
-
-	gif2txt(filename=args.filename,
-			maxLen=args.maxLen,
-			output_file=args.output,
-			with_color=args.color)
-
+class TestGIF(unittest.TestCase):
+	def testMakingGIFs(self):
+		self.assertEqual(gif2txt('test.gif', 50, 'testOut.html', False), os.path.exists('testOut.html')); # Test GIF-Making
+		self.assertEqual(gif2txt('https://i.giphy.com/media/AyawctCEVdEKk/giphy.mp4', 50, 'testOut1.html', False), os.path.exists('testOut1.html')); # Test making GIF from .MP4
+		self.assertEqual(gif2txt('test.gif', 50, 'testOut2.html', True), os.path.exists('testOut2.html')); # Test GIF-Making with color
+		
 if __name__ == '__main__':
-	main()
+    unittest.main()
