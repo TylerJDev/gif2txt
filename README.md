@@ -42,9 +42,13 @@ pip install -r requirements.txt
 To-Do
 -----
 ETA of making GIF
+
 See about making gif 'faster'
+
 Improve sizing of end .GIF
+
 Add support for color > .GIF
+
 Clean files from test after test has completed
 
 Added
