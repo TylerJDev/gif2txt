@@ -39,7 +39,7 @@ Requirements
 pip install -r requirements.txt
 ```
 
-TO-DO
+To-Do
 -----
 ETA of making GIF
 See about making gif 'faster'
@@ -47,10 +47,14 @@ Improve sizing of end .GIF
 Add support for color > .GIF
 Clean files from test after test has completed
 
-ADDED
+Added
 -----
 URL TO GIF,
+
 HTML/CSS FORMATTING,
-MP4 TO GIF AUTO-CONVERT
-Turn into .GIF format alongside of HTML
+
+MP4 TO GIF AUTO-CONVERT,
+
+Turn into .GIF format alongside of HTML,
+
 Added test
