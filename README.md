@@ -4,6 +4,18 @@ gif2txt
 Gif image to to Ascii Text.
 Convert any GIF, MP4 into ASCII text animation!
 
+Features
+----
+URL .GIF support
+
+Enhanced HTML/CSS Formatting
+
+MP4 to .GIF conversion 
+
+.GIF and HTML Output options
+
+Unit Testing
+
 
 See also [img2txt](https://github.com/hit9/img2txt).
 
@@ -39,7 +51,7 @@ Requirements
 pip install -r requirements.txt
 ```
 
-To-Do
+To-Do List
 -----
 ETA of making GIF
 
@@ -50,15 +62,3 @@ Improve sizing of end .GIF
 Add support for color > .GIF
 
 Clean files from test after test has completed
-
-Added
------
-URL TO GIF,
-
-HTML/CSS FORMATTING,
-
-MP4 TO GIF AUTO-CONVERT,
-
-Turn into .GIF format alongside of HTML,
-
-Added test
